@@ -5,8 +5,3 @@
  *   File: Student.java
  */
 
-package definitions;
-
-public class Student {
-}
-
