@@ -20,6 +20,7 @@ public class Book {
       this.ISBNNumberOfTheBook=ISBNNumberOfTheBook;
    }
 
+
    private String getFullNameOfTheBook(){
       return fullNameOfTheBook;
    }
@@ -67,5 +68,10 @@ public class Book {
    public int hashCode() {
       return Objects.hash(getFullNameOfTheBook(), getNameOfTheAuthorOfTheBook(), getISBNNumberOfTheBook());
    }
+
+
+
+
+
 }
 
