@@ -12,9 +12,9 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Student {
-    private String fullNameOfTheStudent;
-    private long universityRollnoOfTheStudent;
-    private int numberOfBooksIssuedByTheStudent;
+    private String fullNameOfTheStudent="Rudra Singh Rathore";
+    private long universityRollnoOfTheStudent=191500481;
+    private int numberOfBooksIssuedByTheStudent=3;
     private Book[] namesOfBooksIssuedByTheStudent;
 
     public Student(String fullNameOfTheStudent,long universityRollnoOfTheStudent,int numberOfBooksIssuedByTheStudent){
@@ -35,11 +35,8 @@ public class Student {
         namesOfBooksIssuedByTheStudent[1]=new Book("Taxation of Digital Economy","VIJAY SHEKHAR JHA","978-93-86920-88-1");
         namesOfBooksIssuedByTheStudent[2]=new Book("FINANCIAL ACCOUNTING","DR. M.V. NAGARAJAN","978-81-945166-0-6");
 
-        for (int i = 0; i < this.namesOfBooksIssuedByTheStudent.length; i++) {
-            System.out.println("The name of the book issued by the student with it's author's name and ISBN number is"+namesOfBooksIssuedByTheStudent);
-
         }
-    }
+
 
 
     private String getFullNameOfTheStudent(){
@@ -73,6 +70,28 @@ public class Student {
     public void setNamesOfBooksIssuedByTheStudent(Book[] namesOfBooksIssuedByTheStudent){
         this.namesOfBooksIssuedByTheStudent=namesOfBooksIssuedByTheStudent;
     }
+
+    public void issuedBooks(){
+        for(Book book : this.namesOfBooksIssuedByTheStudent){
+            System.out.println(book);
+        }
+
+
+    }
+
+    public void addname(){
+        System.out.println("WELCOME"+ "  " +getFullNameOfTheStudent()+ "  !");
+        System.out.println("UNIVERSITY ROLLNUMBER =" + "  " + getUniversityRollnoOfTheStudent());
+        System.out.println("Number of books issued by you is"+ "  " + getNumberOfBooksIssuedByTheStudent());
+    }
+
+    public void returnBooks(){
+        for (Book myBooks:this.namesOfBooksIssuedByTheStudent){
+            System.out.println(myBooks);
+        }
+
+    }
+
 
 
 

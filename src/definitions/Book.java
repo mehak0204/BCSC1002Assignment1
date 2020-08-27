@@ -22,18 +22,22 @@ public class Book {
 
 
    private String getFullNameOfTheBook(){
+
       return fullNameOfTheBook;
    }
 
    private String getNameOfTheAuthorOfTheBook(){
+
       return nameOfTheAuthorOfTheBook;
    }
 
-   private String getISBNNumberOfTheBook(){
+   private String getISBNNumberOfTheBook()
+   {
       return ISBNNumberOfTheBook;
    }
 
    public void setFullNameOfTheBook(String fullNameOfTheBook){
+
       this.fullNameOfTheBook=fullNameOfTheBook;
    }
 
@@ -42,8 +46,11 @@ public class Book {
    }
 
    public void setISBNNumberOfTheBook(String ISBNNumberOfTheBook){
+
       this.fullNameOfTheBook=ISBNNumberOfTheBook;
    }
+
+
 
    @Override
    public String toString() {

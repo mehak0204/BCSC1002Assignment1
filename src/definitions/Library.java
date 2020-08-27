@@ -7,6 +7,8 @@
 
 package definitions;
 
+import java.util.Arrays;
+
 public class Library {
     private Book[] totalNumberOfBooksInTheLibrary;
 
@@ -27,15 +29,51 @@ public class Library {
         totalNumberOfBooksInTheLibrary[8]=new Book("DATA WAREHOUSING AND DATA MINING","Dr D Udaya Suriya Rajkumar","978-93-89970-31-9");
         totalNumberOfBooksInTheLibrary[9]=new Book("Online Teaching : A Need","Dr. Shyam Sundar Sharma","978-93-88746-55-7");
 
-        for (int i = 0; i < this.totalNumberOfBooksInTheLibrary.length; i++) {
-            System.out.println("Total number of books in the Library are as follows:" + totalNumberOfBooksInTheLibrary);
+    }
 
-        }
+    /**
+     * This method will allow us to add total number of books present in  the library to our front desk.
+     */
 
+    public void writeTotalNumberOfBooks(){
+        System.out.println("1. COMMERCIAL CORRESPONDENCE");
+        System.out.println("2. Taxation of Digital Economy");
+        System.out.println("3. FINANCIAL ACCOUNTING");
+        System.out.println("4. Management Accounting");
+        System.out.println("5. Media Studies");
+        System.out.println("6. Motion Graphics and Visual Effects - I");
+        System.out.println("7. INTERNATIONAL BUSINESS MANAGEMENT");
+        System.out.println("8. Precise Laboratory Manual of Mathematics - 11");
+        System.out.println("9. DATA WAREHOUSING AND DATA MINING");
+        System.out.println("10. Online Teaching : A Need");
 
+    }
+
+    public void addNewBookToIssue(String name){
+        System.out.println("\"" + name + "\" is now added to your Library's Account.");
 
     }
 
 
+
+    @Override
+    public String toString() {
+        return "Library{" +
+                "totalNumberOfBooksInTheLibrary=" + Arrays.toString(totalNumberOfBooksInTheLibrary) +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Library)) return false;
+        Library library = (Library) o;
+        return Arrays.equals(totalNumberOfBooksInTheLibrary, library.totalNumberOfBooksInTheLibrary);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(totalNumberOfBooksInTheLibrary);
+    }
 }
 
