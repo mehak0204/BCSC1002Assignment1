@@ -23,13 +23,7 @@ public class FrontDesk {
         Library myLibrary = new Library();
         Student myStudent = new Student();
         String NameOfTheBook;
-        String name;
-        long rollno;
         do {
-            System.out.println("Enter your name (as already registered in Library's Account)");
-            name = scanner.nextLine();
-            System.out.println("Enter your University RollNumber");
-            rollno = scanner.nextLong();
             System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-");
             System.out.println("How may I help you today?");
             System.out.println("1. Issue a new book for me.");
@@ -48,11 +42,13 @@ public class FrontDesk {
                     myLibrary.addNewBookToIssue(NameOfTheBook);
                     break;
                 case RETURN_BOOK:
+                    myStudent.addname();
                     System.out.println("Your previously issued books are returned successfully!!");
                     System.out.println("These are as follows:-");
                     myStudent.returnBooks();
                     break;
                 case SHOW_ALL_ISSUE_BOOKS:
+                    myStudent.addname();
                     System.out.println("These are the total books that are issued by you!");
                     myStudent.issuedBooks();
                     break;
