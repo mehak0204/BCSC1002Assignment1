@@ -49,6 +49,10 @@ public class Library {
 
     }
 
+    /**
+     * This method is use to show that the new book is added into the student's library account.
+     */
+
     public void addNewBookToIssue(String name){
         System.out.println("\"" + name + "\" is now added to your Library's Account.");
 

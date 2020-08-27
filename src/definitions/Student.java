@@ -71,6 +71,10 @@ public class Student {
         this.namesOfBooksIssuedByTheStudent=namesOfBooksIssuedByTheStudent;
     }
 
+    /**
+     * This method will allow us to show the names of the books that is issued by the student.
+     */
+
     public void issuedBooks(){
         for(Book book : this.namesOfBooksIssuedByTheStudent){
             System.out.println(book);
@@ -79,11 +83,19 @@ public class Student {
 
     }
 
+    /**
+     * This method will allow us to show the name and other related information of the student in front desk.
+     */
+
     public void addname(){
         System.out.println("WELCOME"+ "  " +getFullNameOfTheStudent()+ "  !");
         System.out.println("UNIVERSITY ROLLNUMBER =" + "  " + getUniversityRollnoOfTheStudent());
         System.out.println("Number of books issued by you is"+ "  " + getNumberOfBooksIssuedByTheStudent());
     }
+
+    /**
+     * This method will allow us to show the number of books that will be return to the student
+     */
 
     public void returnBooks(){
         for (Book myBooks:this.namesOfBooksIssuedByTheStudent){
